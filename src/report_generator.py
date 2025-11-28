@@ -61,9 +61,14 @@ def generate_full_report(df_root, location="Không xác định", year=None):
     """
     # 1. Setup tên file
     timestamp = datetime.now().strftime("%Y%m%d_%H%M")
-    os.makedirs("../reports", exist_ok=True)
-    pdf_name = f"reports/FULL_REPORT_{location}_{timestamp}.pdf"
-    html_name = f"reports/MAP_{location}_{timestamp}.html"
+    output_dir = "reports"
+
+    # 2. Tạo thư mục ngay tại vị trí hiện tại (bỏ dấu ../)
+    os.makedirs(output_dir, exist_ok=True)
+
+    # 3. Dùng os.path.join để ghép đường dẫn an toàn nhất
+    pdf_name = os.path.join(output_dir, f"FULL_REPORT_{location}_{timestamp}.pdf")
+    html_name = os.path.join(output_dir, f"MAP_{location}_{timestamp}.html")
 
     print(f"--- BẮT ĐẦU TẠO BÁO CÁO FULL ---")
     
