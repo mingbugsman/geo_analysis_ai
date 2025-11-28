@@ -1,6 +1,5 @@
-# ai_engine.py - ĐÃ SỬA HOÀN CHỈNH, KHÔNG CÒN LỖI PYLANCE
 import pandas as pd
-import numpy as np
+
 from sklearn.ensemble import GradientBoostingRegressor
 import constants as c
 

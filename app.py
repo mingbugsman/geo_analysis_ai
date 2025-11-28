@@ -1,6 +1,5 @@
 # app.py
 from hotspot import calculate_priority_score, detect_urban_heat_islands, propose_solution
-import streamlit as st
 import pandas as pd
 from streamlit_folium import st_folium
 import folium

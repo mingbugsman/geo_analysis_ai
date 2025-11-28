@@ -7,14 +7,13 @@ from datetime import datetime
 import os
 import re
 
-# Import các hằng số
-import constants as c
+
 from visualizer import *
 
-# Cấu hình Plotly
+
 pio.templates.default = "plotly_white"
 
-# --- CÁC HÀM HỖ TRỢ ---
+
 def clean_text_for_pdf(text):
     """Làm sạch text HTML để in lên PDF"""
     if not text: return ""
