@@ -157,7 +157,10 @@ if uploaded_files:
                 df_temp['Date_Obj'] = pd.to_datetime(date_str)
                 
                 all_data.append(df_temp)
-
+            else:
+                st.warning(f"File {file.name} bị lỗi dữ liệu: {err}")
+        else: 
+            st.warning(f"File {file.name} không hợp lệ theo định dạng Data_Location_YYYY_MM_DD.xlsx")
     if all_data:
         df_total = pd.concat(all_data, ignore_index=True)
         df_total['Date_Obj'] = pd.to_datetime(df_total['Date_Obj'])
