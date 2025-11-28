@@ -61,7 +61,7 @@ def generate_full_report(df_root, location="Không xác định", year=None):
     """
     # 1. Setup tên file
     timestamp = datetime.now().strftime("%Y%m%d_%H%M")
-    os.makedirs("reports", exist_ok=True)
+    os.makedirs("../reports", exist_ok=True)
     pdf_name = f"reports/FULL_REPORT_{location}_{timestamp}.pdf"
     html_name = f"reports/MAP_{location}_{timestamp}.html"
 
