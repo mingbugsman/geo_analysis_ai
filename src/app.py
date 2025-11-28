@@ -1,4 +1,12 @@
 # app.py
+import sys
+import os
+
+# Thêm thư mục hiện tại vào sys.path
+current_dir = os.path.dirname(os.path.abspath(__file__))
+if current_dir not in sys.path:
+    sys.path.append(current_dir)
+
 from hotspot import calculate_priority_score, detect_urban_heat_islands, propose_solution
 import pandas as pd
 from streamlit_folium import st_folium

@@ -6,7 +6,7 @@ from plotly.subplots import make_subplots
 import folium
 from folium.plugins import HeatMap
 
-import constants as c
+from src import constants as c
 
 TEMPLATE = "plotly_white"
 
